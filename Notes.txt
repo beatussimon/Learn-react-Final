@@ -1,1 +1,16 @@
 Lecture 65 and beyond
+
+In case of useState() hook you have a state and a setState hook to change the value of the state
+useReducer:
+
+In case of reducer we have a state and a reducer function and an action which we dispatch 
+syntax: const[state, dispatch] = useReducer(reducerFunc, initial_value)
+
+function reducer(state, action){
+
+}
+
+Whenever you want yo make changes to the state, changes should be made inside the reducer function
+In useReducer we dispatch an action object which includes the type of action as well as the payload
+
+Then, we have a reducer function which actually modifies the value of the existing state that we have considering the action that we have
