@@ -16,3 +16,15 @@ In useReducer we dispatch an action object which includes the type of action as 
 Then, we have a reducer function which actually modifies the value of the existing state that we have considering the action that we have
 
 Using complex objects as state in reducer hook:
+
+React apps are client side rendered, The server does not send the new page back
+
+React router allows us to have multiple pages in a single page 
+Create pages folder and inside the paages folder there is a place where all our react pages will reside
+
+The pages you create are not going to be html files but react components
+
+
+Nested routes=> Routes inside routes
+
+We neew a way to render the nested routes if you just render them without giving them an outlet they wont be displayed do add outlet self closing tag to the parent router so that they are rendered inside the router
