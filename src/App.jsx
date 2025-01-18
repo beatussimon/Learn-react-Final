@@ -10,6 +10,7 @@ import PageNotFound from "./PageNotFound";
 import Nav from "./pages/Nav";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
+import Products from "./pages/Products";
 
 function App(){
     return(
@@ -17,6 +18,7 @@ function App(){
             <BrowserRouter>
                 <Nav/>
                 <Routes>
+                    <Route path="/products/:id" element={<Products/>}/>
                     <Route path="/" element={<Homepage/>}/>
                     <Route path="/dashboard" element={<Dashboard/>}>
                         <Route path="profile" element={<Profile/>}/>
