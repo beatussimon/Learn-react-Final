@@ -1,5 +1,6 @@
 import { useContext } from "react"
-import { userContext } from "../App";
+import { userContext } from "../UserContext";
+
 
 export default function Checkout() {
     const {user} = useContext(userContext);

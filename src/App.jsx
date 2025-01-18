@@ -13,17 +13,17 @@ import Settings from "./pages/Settings";
 import Products from "./pages/Products";
 import Checkout from "./pages/Checkout";
 import Login from "./Login";
+import UserContext from "./UserContext";
+import UserProvider from "./UserContext";
 
-export const userContext = createContext()
 
 function App(){
-    const [user, setUser] = useState('guest')
     return(
         <div> 
-            <userContext.Provider value={{user, setUser}}>
+            <UserProvider>
                 <Login/>
                 <Checkout/>
-            </userContext.Provider>
+            </UserProvider>
             {/* <BrowserRouter>
                 <Nav/>
                 <Routes>
