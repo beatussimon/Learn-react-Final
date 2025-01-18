@@ -28,3 +28,11 @@ The pages you create are not going to be html files but react components
 Nested routes=> Routes inside routes
 
 We neew a way to render the nested routes if you just render them without giving them an outlet they wont be displayed do add outlet self closing tag to the parent router so that they are rendered inside the router
+
+Programmatic navigation in react:
+For example when an event happens you want to redirect the user to a different page
+For instance you have a button and when it is clicked you want to direct the user to the new tab
+Just like we have useState or useReducer we also have a use Navigate hook
+
+A navigate function allows us to alseo pass in a state as well
+For example when you click on a button it should transfer with it a state into to the newly navigatted page
