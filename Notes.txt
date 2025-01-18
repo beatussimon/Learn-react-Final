@@ -36,3 +36,34 @@ Just like we have useState or useReducer we also have a use Navigate hook
 
 A navigate function allows us to alseo pass in a state as well
 For example when you click on a button it should transfer with it a state into to the newly navigatted page
+
+CONTEXT API:
+we have data and funtion which manipulate that data 
+In react we have been passing the data and functions through different components even if the components do not require those two things
+This phenomena of passing data and functions throug comonents through props is called PROP DRILLING
+we neewd to avoid PROP DRILLING  since the componets which actually do not need the data and functions still has to go and 
+ accept them 
+
+ And the solutioon to this PROP DRILLING problem and that is is to go and create context 
+
+ Incase of contex what we do is we create data and and functions in one of the componets and we pass them to to the context and Whenever
+ some other componentactually require data and functionswe dont have to pass them from one component to the other 
+ and instead we could access that particular context anywhere in anykind of component we have for example if you have component a,b,c then if the context is in a the context can be accessed with other component
+
+ Context is something that allows data and functionaccess from one component to the other without haveing to pass them 
+ to the components which requore them
+
+ The reson we use context is to avoid the problom of prop drilling
+
+ Steps involved with the context:
+    Creating context
+        CREATE A CONTEXT OBJECT THAT YOU CAN PASS TO DIFFERENT component
+    Providing context
+        PROVIDE THAT CONTEXT TO THE OTHER COMPONENTS THAT REQUORES THEM
+        Means once you have crated the context that has data and functions you go and pass them to any component you have
+        Remember exporting your context created so it is accesibke to other components
+    Consuming context
+        MAKE A COMPONENT CONSUME THAT CONTEXT MEANING GO AND USE THE data AND function THA ARE PROVIDED BY context
+    Updating context
+        CONTEXT IS NOTHING MORE THAN JUST data AND functions THAT A PARTICULAR COMPONENT CONSUMES, THE FINAL STAGE IS TAKING
+         THE DATA THAT WAS IN THE CONTEXT AND UPDATING IT

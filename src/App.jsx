@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { createContext, useContext, useReducer } from "react";
 import { useState } from "react";
 import Learn from "./components/Learn";
 import SimpleBank from "./components/SimpleBank";
@@ -11,11 +11,20 @@ import Nav from "./pages/Nav";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import Products from "./pages/Products";
+import Checkout from "./pages/Checkout";
+import Login from "./Login";
+
+export const userContext = createContext()
 
 function App(){
+    const [user, setUser] = useState('guest')
     return(
         <div> 
-            <BrowserRouter>
+            <userContext.Provider value={{user, setUser}}>
+                <Login/>
+                <Checkout/>
+            </userContext.Provider>
+            {/* <BrowserRouter>
                 <Nav/>
                 <Routes>
                     <Route path="/products/:id" element={<Products/>}/>
@@ -26,7 +35,7 @@ function App(){
                     </Route>
                     <Route path="*" element={<PageNotFound/>}/>
                 </Routes>
-            </BrowserRouter>
+            </BrowserRouter> */}
             {/*<Learn/>*/}
             {/* <SimpleBank/> */}
         </div>
