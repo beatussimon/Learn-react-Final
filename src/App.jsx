@@ -15,15 +15,23 @@ import Checkout from "./pages/Checkout";
 import Login from "./Login";
 import UserContext from "./UserContext";
 import UserProvider from "./UserContext";
+import Checkouttwo from "./COntextConcepts/Checkouttwo";
+import NewLogin from "./COntextConcepts/NewLogin";
+import { UsertProvider } from "./Context/Usercontext";
+
 
 
 function App(){
     return(
         <div> 
-            <UserProvider>
+            <UsertProvider>
+                <NewLogin/>
+                <Checkouttwo/>
+            </UsertProvider>
+            {/* <UserProvider>
                 <Login/>
                 <Checkout/>
-            </UserProvider>
+            </UserProvider> */}
             {/* <BrowserRouter>
                 <Nav/>
                 <Routes>

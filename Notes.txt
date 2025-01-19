@@ -38,7 +38,7 @@ A navigate function allows us to alseo pass in a state as well
 For example when you click on a button it should transfer with it a state into to the newly navigatted page
 
 CONTEXT API:
-we have data and funtion which manipulate that data 
+we hazve data and funtion which manipulate that data 
 In react we have been passing the data and functions through different components even if the components do not require those two things
 This phenomena of passing data and functions throug comonents through props is called PROP DRILLING
 we neewd to avoid PROP DRILLING  since the componets which actually do not need the data and functions still has to go and 
